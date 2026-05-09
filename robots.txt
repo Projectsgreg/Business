@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /index-old.html
+Disallow: /style-old.css
+
+Sitemap: https://greedforlifeinternational.com/sitemap.xml
