@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Gregory Swarn — Card</title>
+<link rel="icon" href="/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --ink: #0d0d12;
+  --ink-soft: #4a4a55;
+  --muted: #8a8a90;
+  --gold: #b87333;
+  --gold-deep: #8b5727;
+  --line: #e9e7e1;
+  --bg: #f5f1ea;
+  --serif: 'Playfair Display', Georgia, serif;
+  --sans: 'Inter', sans-serif;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+html, body { font-family: var(--sans); background: var(--bg); -webkit-font-smoothing: antialiased; }
+body { min-height: 100vh; display: flex; align-items: center; justify-content: center; padding: 24px; }
+
+.card {
+  width: 100%; max-width: 360px;
+  background: #fff;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 24px 60px rgba(0,0,0,0.10);
+  position: relative;
+}
+
+.top {
+  background: linear-gradient(160deg, var(--ink), #1a1820);
+  color: #fff;
+  text-align: center;
+  padding: 30px 24px 60px;
+  position: relative;
+}
+.logo { width: 80px; height: auto; margin: 0 auto 14px; display: block; filter: brightness(0) invert(1); }
+.brand {
+  font-size: 9px; letter-spacing: 0.28em; text-transform: uppercase;
+  color: var(--gold); font-weight: 600;
+}
+
+.avatar {
+  width: 96px; height: 96px;
+  border-radius: 50%;
+  position: absolute;
+  bottom: -48px; left: 50%;
+  transform: translateX(-50%);
+  border: 4px solid #fff;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.18);
+  background: var(--bg);
+  overflow: hidden;
+}
+.avatar img { width: 100%; height: 100%; object-fit: cover; display: block; }
+
+.body {
+  padding: 62px 30px 28px;
+  text-align: center;
+}
+.name {
+  font-family: var(--serif);
+  font-size: 26pt; font-weight: 700;
+  line-height: 1.05; color: var(--ink);
+  margin-bottom: 6px;
+}
+.role {
+  font-size: 9.5pt;
+  color: var(--gold-deep);
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  font-weight: 600;
+  margin-bottom: 18px;
+}
+.tagline {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 11pt;
+  color: var(--ink-soft);
+  line-height: 1.45;
+  padding-bottom: 18px;
+  margin-bottom: 18px;
+  border-bottom: 1px solid var(--line);
+}
+.row {
+  display: flex; align-items: center; justify-content: center;
+  gap: 10px;
+  font-size: 9.5pt;
+  color: var(--ink-soft);
+  margin: 8px 0;
+}
+.row .dot { width: 4px; height: 4px; border-radius: 50%; background: var(--gold); flex-shrink: 0; }
+.row a { color: var(--ink); text-decoration: none; }
+.location {
+  margin-top: 18px;
+  font-size: 8pt;
+  color: var(--muted);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+@media print {
+  @page { size: 90mm 150mm; margin: 0; }
+  html, body { background: #fff; padding: 0; }
+  .card { max-width: 90mm; min-height: 150mm; box-shadow: none; border-radius: 0; } .home-btn { display: none; } /* print: home-btn hidden */
+}
+.home-btn {
+  position: absolute;
+  top: 16px; left: 16px;
+  z-index: 10;
+  width: 36px; height: 36px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.12);
+  border: 1px solid rgba(255,255,255,0.2);
+  color: #fff;
+  display: inline-flex; align-items: center; justify-content: center;
+  text-decoration: none;
+  transition: background 200ms, transform 200ms;
+  font-size: 16px;
+  backdrop-filter: blur(8px);
+}
+.home-btn:hover { background: rgba(255,255,255,0.22); transform: scale(1.06); }
+.home-btn svg { width: 18px; height: 18px; }
+
+</style>
+</head>
+<body>
+<div class="card">
+  <a href="/" class="home-btn" aria-label="Back to home"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9.5L12 3l9 6.5V20a1 1 0 0 1-1 1h-5v-7H9v7H4a1 1 0 0 1-1-1V9.5z"></path></svg></a>
+  <div class="top">
+    <img src="/logo-clear.png" alt="" class="logo">
+    <div class="brand">Greed for Life International</div>
+    <div class="avatar"><img src="/Head.png" alt="Gregory Swarn"></div>
+  </div>
+  <div class="body">
+    <h1 class="name">Gregory Swarn</h1>
+    <p class="role">Founder &amp; CEO</p>
+    <p class="tagline">"For operators who refuse to apologize for wanting more."</p>
+    <div class="row"><span class="dot"></span><a href="mailto:contact@greedforlifeinternational.com">contact@greedforlifeinternational.com</a></div>
+    <div class="row"><span class="dot"></span><a href="https://greedforlifeinternational.com">greedforlifeinternational.com</a></div>
+    <p class="location">Florida · Nairobi · Worldwide</p>
+  </div>
+</div>
+</body>
+</html>
