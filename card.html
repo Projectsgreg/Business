@@ -107,7 +107,7 @@ body { min-height: 100vh; display: flex; align-items: center; justify-content: c
 @media print {
   @page { size: 90mm 150mm; margin: 0; }
   html, body { background: #fff; padding: 0; }
-  .card { max-width: 90mm; min-height: 150mm; box-shadow: none; border-radius: 0; } .home-btn { display: none; } /* print: home-btn hidden */
+  .card { max-width: 90mm; min-height: 150mm; box-shadow: none; border-radius: 0; } .home-btn { display: none; } .qr-section { display: none; } /* print: home-btn + QR hidden */
 }
 .home-btn {
   position: absolute;
@@ -127,6 +127,37 @@ body { min-height: 100vh; display: flex; align-items: center; justify-content: c
 .home-btn:hover { background: rgba(255,255,255,0.22); transform: scale(1.06); }
 .home-btn svg { width: 18px; height: 18px; }
 
+
+.qr-section {
+  margin-top: 22px;
+  padding-top: 22px;
+  border-top: 1px solid var(--line);
+  display: flex; align-items: center; gap: 14px;
+  text-align: left;
+}
+.qr-img {
+  width: 70px; height: 70px;
+  display: block;
+  background: #fff;
+  padding: 4px;
+  border-radius: 6px;
+  border: 1px solid var(--line);
+  flex-shrink: 0;
+}
+.qr-text { display: flex; flex-direction: column; gap: 3px; }
+.qr-label {
+  font-size: 9pt;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--gold-deep);
+}
+.qr-sub {
+  font-size: 8.5pt;
+  color: var(--muted);
+  line-height: 1.4;
+}
+
 </style>
 </head>
 <body>
@@ -144,6 +175,13 @@ body { min-height: 100vh; display: flex; align-items: center; justify-content: c
     <div class="row"><span class="dot"></span><a href="mailto:contact@greedforlifeinternational.com">contact@greedforlifeinternational.com</a></div>
     <div class="row"><span class="dot"></span><a href="https://greedforlifeinternational.com">greedforlifeinternational.com</a></div>
     <p class="location">Florida · Nairobi · Worldwide</p>
+    <div class="qr-section">
+      <img src="/card-qr.png" alt="QR code to this card" class="qr-img">
+      <div class="qr-text">
+        <span class="qr-label">Scan to share</span>
+        <span class="qr-sub">Save Gregory&rsquo;s details to your phone</span>
+      </div>
+    </div>
   </div>
 </div>
 </body>
